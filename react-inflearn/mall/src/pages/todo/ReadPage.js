@@ -20,6 +20,13 @@ function ReadPage(props) {
         })        
     };
 
+    const moveToList = () => {
+        navigate({
+            pathname: '/todo/list',
+            search: queryStr
+        })
+    };
+
 
     return (
         <div className={'text-3xl'}>
@@ -27,7 +34,8 @@ function ReadPage(props) {
 
             {/* 내가 props로 써야할것과 라우터로 써야할것을 구분하는게 좋음. */}
             
-            <div onClick={() => moveToModify(tno)}> Test Modify </div>
+            <button onClick={() => moveToModify(tno)}> Test Modify </button>
+            <button onClick={moveToList}> Test List </button>
 
         </div>
     );
